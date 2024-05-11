@@ -4,8 +4,6 @@ Official Implementation for [Guided variational Autoencoder for Disentanglement 
 
 ![](Figures/GuidedVAE_model.png)
 
-
-
 ### Installation
 
 1. Clone this repo:
@@ -39,8 +37,8 @@ data_dir/
         images/
         list_attr_celeba.txt
     MNIST/
-    	processed/
-    	raw/
+     processed/
+     raw/
 ```
 
 * For `MNIST`, `torchvision` will automatically download it.
@@ -75,4 +73,5 @@ For more options, please refer to `main.py`.
 ```
 
 ### License
+
 This repository is released under the Apache License 2.0. License can be found in [LICENSE](LICENSE) file.
