@@ -55,7 +55,7 @@ def arg_parse():
 
 if __name__ == "__main__":
     args = arg_parse()
-    device = torch.device("cuda:{}".format(args.gpu))
+    device = torch.device('cpu')
     if not os.path.exists(args.output):
         os.mkdir(args.output)
 
