@@ -8,6 +8,7 @@ from torchvision import datasets, transforms
 from torchvision.utils import save_image
 import os
 import pickle
+from pathlib import Path
 
 from tqdm import tqdm
 import random
@@ -85,8 +86,11 @@ if __name__ == "__main__":
             T.Resize(64),
             T.ToTensor(),
         ])
-        data_path = os.path.join(args.dataroot, 'celeba/images')
-        attr_path = os.path.join(args.dataroot, 'celeba/list_attr_celeba.txt')
+
+
+        data_path = Path(args.dataroot, 'images').resolve()
+        attr_path = Path(args.dataroot, 'list_attr_celeba.txt').resolve()
+
         train_dataset = CelebA(data_path, attr_path, args.selected_attrs, transform, 'train')
         test_dataset = CelebA(data_path, attr_path, args.selected_attrs, transform, 'test')
         train_loader = DataLoader(dataset=train_dataset, batch_size=args.batch_size, num_workers=args.num_workers)

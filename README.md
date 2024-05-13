@@ -55,7 +55,7 @@ python main.py --dataset MNIST --dataroot /path/to/your/data_dir --output output
 * For `CelebA`
 
 ```
-python main.py --dataset CelebA --dataroot /path/to/your/data_dir --output output_CelebA
+python main.py --dataset CelebA --dataroot /celeba/img_align_celeba --output output_CelebA
 ```
 
 For more options, please refer to `main.py`.
